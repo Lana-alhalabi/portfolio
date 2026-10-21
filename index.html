@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lana — Information Engineering student specializing in Software Engineering. Frontend developer and graphic designer. Portfolio, CV, and services." />
+  <meta name="keywords" content="Lana, frontend developer, graphic designer, software engineering, portfolio, web design, HTML, CSS, JavaScript" />
+  <meta name="author" content="Lana" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lana — Creative Mind. Engineering Soul." />
+  <meta property="og:description" content="Portfolio of Lana — Information Engineering student, frontend developer, and graphic designer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <title>LANA — Creative Mind. Engineering Soul.</title>
+
+  <!-- Favicon monogram (inline SVG as data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2308080C'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='bold' fill='%23FF4FA3' text-anchor='middle'>L</text></svg>" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SKIP LINK (accessibility)
+  ============================================================ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       AMBIENT BACKGROUND LAYER
+  ============================================================ -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <canvas id="starfield" class="starfield"></canvas>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav-header" id="nav-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <!-- Wordmark -->
+      <a href="#home" class="nav-wordmark" aria-label="LANA — go to home">
+        <span class="wordmark-l">L</span><span class="wordmark-ana">ANA</span>
+        <span class="wordmark-dot" aria-hidden="true"></span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#home"     class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#journey"  class="nav-link" data-section="journey">Journey</a></li>
+        <li><a href="#contact"  class="nav-link nav-link--cta" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+      <ul class="mobile-links" role="list">
+        <li><a href="#home"     class="mobile-link">Home</a></li>
+        <li><a href="#about"    class="mobile-link">About</a></li>
+        <li><a href="#skills"   class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#journey"  class="mobile-link">Journey</a></li>
+        <li><a href="#contact"  class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section id="home" class="section hero-section" aria-label="Hero">
+      <div class="hero-content">
+        <!-- Text side -->
+        <div class="hero-text" data-reveal>
+          <p class="hero-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            Information Engineering · Software Engineering
+          </p>
+          <h1 class="hero-headline">
+            <span class="headline-line">CREATIVE</span>
+            <span class="headline-line headline-accent">MIND.</span>
+            <span class="headline-line">ENGINEERING</span>
+            <span class="headline-line headline-accent">SOUL.</span>
+          </h1>
+          <p class="hero-intro">
+            I'm <strong>Lana</strong> — a software engineering student who bridges the gap between elegant code and
+            visual design. I build beautiful, functional web experiences and craft digital identities that feel
+            both engineered and alive.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn--primary">Explore My Work</a>
+            <a href="#contact"  class="btn btn--ghost">Let's Work Together</a>
+          </div>
+          <!-- Floating badges -->
+          <div class="hero-badges" aria-hidden="true">
+            <span class="badge">Frontend Dev</span>
+            <span class="badge">Graphic Design</span>
+            <span class="badge">ICDL</span>
+          </div>
+        </div>
+
+        <!-- Visual side -->
+        <div class="hero-visual" aria-hidden="true" data-reveal data-reveal-delay="200">
+          <div class="hero-frame">
+            <!-- Code editor mockup -->
+            <div class="code-editor-mock">
+              <div class="editor-titlebar">
+                <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                <span class="editor-filename">portfolio.js</span>
+              </div>
+              <div class="editor-body">
+                <div class="code-line"><span class="c-comment">// Information Engineering · Software</span></div>
+                <div class="code-line"><span class="c-kw">const</span> <span class="c-var">lana</span> <span class="c-op">=</span> <span class="c-brace">{</span></div>
+                <div class="code-line indent"><span class="c-prop">degree</span><span class="c-op">:</span> <span class="c-str">'Information Engineering'</span><span class="c-comma">,</span></div>
+                <div class="code-line indent"><span class="c-prop">major</span><span class="c-op">:</span> <span class="c-str">'Software Engineering'</span><span class="c-comma">,</span></div>
+                <div class="code-line indent"><span class="c-prop">role</span><span class="c-op">:</span> <span class="c-str">'Frontend &amp; Design'</span><span class="c-comma">,</span></div>
+                <div class="code-line indent"><span class="c-prop">passion</span><span class="c-op">:</span> <span class="c-str">'Building beauty'</span><span class="c-comma">,</span></div>
+                <div class="code-line indent"><span class="c-prop">status</span><span class="c-op">:</span> <span class="c-str">'Available ✦'</span></div>
+                <div class="code-line"><span class="c-brace">}</span><span class="c-semi">;</span></div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line"><span class="c-kw">function</span> <span class="c-fn">createMagic</span><span class="c-paren">()</span> <span class="c-brace">{</span></div>
+                <div class="code-line indent"><span class="c-kw">return</span> <span class="c-str">'✦ something wonderful'</span><span class="c-semi">;</span></div>
+                <div class="code-line"><span class="c-brace">}</span></div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line"><span class="c-cursor">▌</span></div>
+              </div>
+            </div>
+            <!-- Floating UI cards -->
+            <div class="floating-card card-skills">
+              <span class="fc-icon">⬡</span>
+              <span>HTML · CSS · JS</span>
+            </div>
+            <div class="floating-card card-design">
+              <span class="fc-icon">◈</span>
+              <span>Visual Design</span>
+            </div>
+            <!-- Decorative pixel clusters -->
+            <div class="pixel-cluster cluster-a" aria-hidden="true"></div>
+            <div class="pixel-cluster cluster-b" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-label">scroll</span>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section about-section" aria-label="About me">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">Who I Am</p>
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Visual card -->
+          <div class="about-visual-card" data-reveal data-reveal-delay="100">
+            <div class="about-avatar-frame" aria-hidden="true">
+              <!-- Monogram / placeholder for photo -->
+              <div class="avatar-monogram">L</div>
+              <div class="avatar-ring ring-1"></div>
+              <div class="avatar-ring ring-2"></div>
+              <div class="avatar-ring ring-3"></div>
+              <!-- Decorative label -->
+              <div class="avatar-label">
+                <span class="al-dot"></span> Open to opportunities
+              </div>
+            </div>
+            <!-- Stat chips -->
+            <div class="about-stats">
+              <div class="stat-chip">
+                <span class="stat-icon">✦</span>
+                <span class="stat-text">Information Engineering</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-icon">◈</span>
+                <span class="stat-text">Software Engineering Track</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-icon">⬡</span>
+                <span class="stat-text">Frontend + Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text content -->
+          <div class="about-text" data-reveal data-reveal-delay="200">
+            <p class="about-lead">
+              I'm a student of <strong>Information Engineering</strong> specializing in
+              <strong>Software Engineering</strong>, on a journey where logic meets aesthetics.
+            </p>
+            <p>
+              My work sits at the intersection of engineering precision and visual storytelling.
+              I love building things that <em>feel</em> as good as they <em>function</em> — from a perfectly
+              structured codebase to a meticulously crafted interface.
+            </p>
+            <p>
+              My personality is calm and curious, with a streak of adventure and a quietly mysterious edge.
+              I'm drawn to detail: the luxurious ornament, the perfectly chosen typeface, the line of code
+              that just clicks. Whether designing a brand identity or building a responsive layout,
+              I bring the same care to every pixel.
+            </p>
+            <p>
+              I believe technology and creativity aren't opposites — they're the same impulse, expressed
+              in different languages.
+            </p>
+
+            <!-- Personality tags -->
+            <div class="personality-tags">
+              <span class="tag">Calm</span>
+              <span class="tag">Curious</span>
+              <span class="tag">Creative</span>
+              <span class="tag">Adventurous</span>
+              <span class="tag">Detail-Oriented</span>
+              <span class="tag">Mysterious ✦</span>
+            </div>
+
+            <a href="#contact" class="btn btn--primary mt-md">Say Hello</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="section skills-section" aria-label="Skills">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">What I Know</p>
+          <h2 class="section-title">Skills &amp; <span class="accent">Tools</span></h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- === DEVELOPMENT === -->
+          <div class="skill-category-card glass-card" data-reveal data-reveal-delay="0">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">⟨/⟩</span>
+              <h3 class="skill-cat-title">Web Development</h3>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML5</span>
+                  <span class="skill-tag">Semantic · Accessible</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="HTML5 proficiency: working knowledge">
+                  <div class="skill-bar-fill" data-skill="html"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CSS3</span>
+                  <span class="skill-tag">Layouts · Animations</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="CSS3 proficiency: working knowledge">
+                  <div class="skill-bar-fill" data-skill="css"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-tag">Vanilla · DOM</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="JavaScript proficiency: learning">
+                  <div class="skill-bar-fill" data-skill="js"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Responsive Design</span>
+                  <span class="skill-tag">Mobile-first</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="Responsive Design: working knowledge">
+                  <div class="skill-bar-fill" data-skill="responsive"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- === DESIGN === -->
+          <div class="skill-category-card glass-card" data-reveal data-reveal-delay="100">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">◈</span>
+              <h3 class="skill-cat-title">Graphic Design</h3>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Visual Composition</span>
+                  <span class="skill-tag">Layout · Balance</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="Visual Composition: strong">
+                  <div class="skill-bar-fill" data-skill="composition"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Typography</span>
+                  <span class="skill-tag">Hierarchy · Pairing</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="Typography: strong">
+                  <div class="skill-bar-fill" data-skill="typography"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Color Theory</span>
+                  <span class="skill-tag">Palettes · Mood</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="Color Theory: working knowledge">
+                  <div class="skill-bar-fill" data-skill="color"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Brand Identity</span>
+                  <span class="skill-tag">Logos · Style Guides</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="Brand Identity: learning">
+                  <div class="skill-bar-fill" data-skill="brand"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- === OTHER === -->
+          <div class="skill-category-card glass-card" data-reveal data-reveal-delay="200">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">✦</span>
+              <h3 class="skill-cat-title">Other Skills</h3>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">ICDL</span>
+                  <span class="skill-tag">Certified</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="ICDL: certified">
+                  <div class="skill-bar-fill" data-skill="icdl"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">UI/UX Thinking</span>
+                  <span class="skill-tag">User-Centred</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="UI/UX Thinking: learning">
+                  <div class="skill-bar-fill" data-skill="uiux"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Problem Solving</span>
+                  <span class="skill-tag">Analytical</span>
+                </div>
+                <div class="skill-bar-track" role="img" aria-label="Problem Solving: strong">
+                  <div class="skill-bar-fill" data-skill="problem"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Note about skill bars -->
+        <p class="skills-note" data-reveal>
+          ✦ Skill bars represent a <em>qualitative</em> sense of familiarity — not a percentage score.
+          Update them freely in <code>style.css</code> under <code>/* skill bar widths */</code>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section projects-section" aria-label="Projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">What I've Built</p>
+          <h2 class="section-title">Selected <span class="accent">Projects</span></h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-bar" role="group" aria-label="Filter projects by category" data-reveal>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Dev</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+          <!--
+            HOW TO ADD A REAL PROJECT:
+            1. Copy one <article class="project-card"> block below.
+            2. Replace data-category with: web | design | other
+            3. Replace the <img> src with your screenshot path, e.g. "assets/project-my-site.png"
+            4. Fill in title, description, technologies, and links.
+            5. Remove the class "project-placeholder" once you have a real image.
+          -->
+
+          <article class="project-card glass-card" data-category="web" data-reveal>
+            <div class="project-image-wrap">
+              <!-- REPLACE: add your screenshot as assets/project-1.png -->
+              <div class="project-img-placeholder project-img-placeholder--laptop" aria-label="Laptop with code on screen">
+                <svg class="tech-illustration" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Laptop body -->
+                  <rect x="60" y="20" width="200" height="125" rx="8" fill="#12121A" stroke="#FF4FA3" stroke-width="1.5"/>
+                  <!-- Screen glow -->
+                  <rect x="68" y="28" width="184" height="110" rx="4" fill="#08080C"/>
+                  <rect x="68" y="28" width="184" height="110" rx="4" fill="url(#screenGlow1)"/>
+                  <!-- Code lines on screen -->
+                  <rect x="80" y="42" width="50" height="4" rx="2" fill="#FF4FA3" opacity="0.9"/>
+                  <rect x="136" y="42" width="30" height="4" rx="2" fill="#FFD9EB" opacity="0.7"/>
+                  <rect x="172" y="42" width="40" height="4" rx="2" fill="#ffd59e" opacity="0.7"/>
+                  <rect x="88" y="54" width="80" height="4" rx="2" fill="#A5A1AD" opacity="0.5"/>
+                  <rect x="174" y="54" width="35" height="4" rx="2" fill="#FF4FA3" opacity="0.6"/>
+                  <rect x="88" y="66" width="60" height="4" rx="2" fill="#ffd59e" opacity="0.6"/>
+                  <rect x="154" y="66" width="45" height="4" rx="2" fill="#FFD9EB" opacity="0.5"/>
+                  <rect x="80" y="78" width="45" height="4" rx="2" fill="#FF4FA3" opacity="0.8"/>
+                  <rect x="88" y="90" width="70" height="4" rx="2" fill="#A5A1AD" opacity="0.4"/>
+                  <rect x="164" y="90" width="30" height="4" rx="2" fill="#ffd59e" opacity="0.5"/>
+                  <rect x="88" y="102" width="55" height="4" rx="2" fill="#FFD9EB" opacity="0.6"/>
+                  <rect x="80" y="114" width="40" height="4" rx="2" fill="#FF4FA3" opacity="0.7"/>
+                  <!-- Cursor blink -->
+                  <rect x="122" y="114" width="3" height="10" rx="1" fill="#FF4FA3" opacity="0.9">
+                    <animate attributeName="opacity" values="0.9;0;0.9" dur="1s" repeatCount="indefinite"/>
+                  </rect>
+                  <!-- Keyboard base -->
+                  <rect x="40" y="145" width="240" height="12" rx="4" fill="#12121A" stroke="#FF4FA3" stroke-width="1"/>
+                  <!-- Trackpad -->
+                  <rect x="130" y="149" width="60" height="6" rx="2" fill="#21121F" stroke="rgba(255,79,163,0.3)" stroke-width="0.8"/>
+                  <!-- Ambient glow under laptop -->
+                  <ellipse cx="160" cy="162" rx="80" ry="6" fill="rgba(255,79,163,0.15)" filter="url(#glow1)"/>
+                  <defs>
+                    <linearGradient id="screenGlow1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#FF4FA3" stop-opacity="0.05"/>
+                      <stop offset="100%" stop-color="#21121F" stop-opacity="0.2"/>
+                    </linearGradient>
+                    <filter id="glow1"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                  </defs>
+                </svg>
+                <span class="placeholder-text">Replace with screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <!-- Uncomment and fill in once you have a live URL -->
+                  <!-- <a href="YOUR_LIVE_URL" target="_blank" rel="noopener noreferrer" class="project-action-btn">Live Demo ↗</a> -->
+                  <!-- <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer" class="project-action-btn project-action-btn--ghost">GitHub ↗</a> -->
+                  <p class="overlay-note">Add links above once project is live</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-tag">Web Dev</span>
+              </div>
+              <h3 class="project-title">
+                <!-- REPLACE: Your project name -->
+                [Project Name — e.g. Personal Portfolio]
+              </h3>
+              <p class="project-desc">
+                <!-- REPLACE: 1–2 sentence description of what this project does and what you learned. -->
+                A short description of this project goes here. What did you build? What problem does it solve?
+                What did you learn?
+              </p>
+              <div class="project-tech">
+                <!-- REPLACE: Technologies used -->
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS</span>
+                <span class="tech-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="design" data-reveal data-reveal-delay="100">
+            <div class="project-image-wrap">
+              <div class="project-img-placeholder project-img-placeholder--design" aria-label="Design tools and color palette illustration">
+                <svg class="tech-illustration" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Monitor frame -->
+                  <rect x="80" y="15" width="160" height="115" rx="8" fill="#12121A" stroke="#F4B6D2" stroke-width="1.5"/>
+                  <rect x="88" y="23" width="144" height="100" rx="4" fill="#08080C"/>
+                  <!-- Grid on screen -->
+                  <line x1="88" y1="48" x2="232" y2="48" stroke="rgba(244,182,210,0.1)" stroke-width="0.5"/>
+                  <line x1="88" y1="73" x2="232" y2="73" stroke="rgba(244,182,210,0.1)" stroke-width="0.5"/>
+                  <line x1="88" y1="98" x2="232" y2="98" stroke="rgba(244,182,210,0.1)" stroke-width="0.5"/>
+                  <line x1="112" y1="23" x2="112" y2="123" stroke="rgba(244,182,210,0.1)" stroke-width="0.5"/>
+                  <line x1="160" y1="23" x2="160" y2="123" stroke="rgba(244,182,210,0.1)" stroke-width="0.5"/>
+                  <line x1="208" y1="23" x2="208" y2="123" stroke="rgba(244,182,210,0.1)" stroke-width="0.5"/>
+                  <!-- Abstract shapes on screen -->
+                  <circle cx="138" cy="68" r="30" fill="none" stroke="#FF4FA3" stroke-width="1.5" opacity="0.8"/>
+                  <circle cx="138" cy="68" r="18" fill="rgba(255,79,163,0.15)"/>
+                  <rect x="168" y="42" width="44" height="28" rx="4" fill="rgba(244,182,210,0.1)" stroke="#F4B6D2" stroke-width="1"/>
+                  <rect x="168" y="78" width="44" height="16" rx="3" fill="rgba(255,79,163,0.12)" stroke="rgba(255,79,163,0.4)" stroke-width="0.8"/>
+                  <!-- Colour swatches bottom of screen -->
+                  <rect x="95" y="105" width="14" height="10" rx="2" fill="#FF4FA3"/>
+                  <rect x="112" y="105" width="14" height="10" rx="2" fill="#F4B6D2"/>
+                  <rect x="129" y="105" width="14" height="10" rx="2" fill="#FFD9EB"/>
+                  <rect x="146" y="105" width="14" height="10" rx="2" fill="#21121F" stroke="#F4B6D2" stroke-width="0.8"/>
+                  <rect x="163" y="105" width="14" height="10" rx="2" fill="#A5A1AD"/>
+                  <!-- Monitor stand -->
+                  <rect x="150" y="130" width="20" height="12" rx="2" fill="#12121A" stroke="#F4B6D2" stroke-width="1"/>
+                  <rect x="130" y="141" width="60" height="6" rx="3" fill="#12121A" stroke="#F4B6D2" stroke-width="1"/>
+                  <!-- Floating pen tool icon -->
+                  <g transform="translate(240,30)" opacity="0.7">
+                    <circle cx="12" cy="12" r="12" fill="rgba(244,182,210,0.08)" stroke="rgba(244,182,210,0.3)" stroke-width="1"/>
+                    <path d="M8 16 L12 6 L16 16" stroke="#F4B6D2" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                    <line x1="9.5" y1="13" x2="14.5" y2="13" stroke="#F4B6D2" stroke-width="1" opacity="0.6"/>
+                  </g>
+                  <!-- Ambient glow -->
+                  <ellipse cx="160" cy="155" rx="60" ry="5" fill="rgba(244,182,210,0.1)"/>
+                </svg>
+                <span class="placeholder-text">Replace with screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <p class="overlay-note">Add links above once project is live</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-tag project-category-tag--design">Design</span>
+              </div>
+              <h3 class="project-title">[Project Name — e.g. Brand Identity]</h3>
+              <p class="project-desc">
+                Description of this design project. Mention the client or context, the tools used, and
+                the outcome.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">Graphic Design</span>
+                <span class="tech-pill">Typography</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="web" data-reveal data-reveal-delay="200">
+            <div class="project-image-wrap">
+              <div class="project-img-placeholder project-img-placeholder--code" aria-label="Code editor with browser preview illustration">
+                <svg class="tech-illustration" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Browser window -->
+                  <rect x="20" y="18" width="185" height="140" rx="7" fill="#12121A" stroke="#FF4FA3" stroke-width="1.2"/>
+                  <!-- Browser toolbar -->
+                  <rect x="20" y="18" width="185" height="22" rx="7" fill="#1a1a28"/>
+                  <rect x="20" y="29" width="185" height="11" fill="#1a1a28"/>
+                  <circle cx="34" cy="29" r="4" fill="#ff5f57" opacity="0.8"/>
+                  <circle cx="46" cy="29" r="4" fill="#ffbd2e" opacity="0.8"/>
+                  <circle cx="58" cy="29" r="4" fill="#28ca41" opacity="0.8"/>
+                  <!-- URL bar -->
+                  <rect x="70" y="24" width="110" height="10" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,79,163,0.2)" stroke-width="0.8"/>
+                  <circle cx="80" cy="29" r="2.5" fill="none" stroke="rgba(255,79,163,0.4)" stroke-width="0.8"/>
+                  <line x1="82" y1="31" x2="85" y2="34" stroke="rgba(255,79,163,0.4)" stroke-width="0.8"/>
+                  <!-- Web page content mockup -->
+                  <rect x="28" y="48" width="169" height="10" rx="3" fill="rgba(255,79,163,0.5)"/>
+                  <rect x="28" y="64" width="100" height="6" rx="2" fill="rgba(245,243,247,0.15)"/>
+                  <rect x="28" y="74" width="130" height="4" rx="2" fill="rgba(165,161,173,0.2)"/>
+                  <rect x="28" y="82" width="115" height="4" rx="2" fill="rgba(165,161,173,0.15)"/>
+                  <rect x="28" y="92" width="125" height="4" rx="2" fill="rgba(165,161,173,0.12)"/>
+                  <!-- Buttons on page -->
+                  <rect x="28" y="104" width="55" height="16" rx="8" fill="rgba(255,79,163,0.3)" stroke="rgba(255,79,163,0.5)" stroke-width="0.8"/>
+                  <rect x="90" y="104" width="40" height="16" rx="8" fill="transparent" stroke="rgba(245,243,247,0.2)" stroke-width="0.8"/>
+                  <!-- Card on page -->
+                  <rect x="28" y="128" width="75" height="22" rx="4" fill="rgba(33,18,31,0.8)" stroke="rgba(255,79,163,0.2)" stroke-width="0.8"/>
+                  <rect x="110" y="128" width="75" height="22" rx="4" fill="rgba(33,18,31,0.8)" stroke="rgba(244,182,210,0.2)" stroke-width="0.8"/>
+
+                  <!-- Code panel (right side) -->
+                  <rect x="215" y="18" width="88" height="140" rx="7" fill="#0c0c18" stroke="rgba(255,79,163,0.2)" stroke-width="1"/>
+                  <rect x="222" y="30" width="40" height="3" rx="1.5" fill="#FF4FA3" opacity="0.8"/>
+                  <rect x="228" y="38" width="55" height="3" rx="1.5" fill="#ffd59e" opacity="0.6"/>
+                  <rect x="228" y="45" width="48" height="3" rx="1.5" fill="#A5A1AD" opacity="0.4"/>
+                  <rect x="228" y="52" width="52" height="3" rx="1.5" fill="#FFD9EB" opacity="0.6"/>
+                  <rect x="222" y="60" width="38" height="3" rx="1.5" fill="#FF4FA3" opacity="0.7"/>
+                  <rect x="228" y="67" width="44" height="3" rx="1.5" fill="#ffd59e" opacity="0.5"/>
+                  <rect x="228" y="74" width="50" height="3" rx="1.5" fill="#A5A1AD" opacity="0.4"/>
+                  <rect x="222" y="82" width="35" height="3" rx="1.5" fill="#FF4FA3" opacity="0.6"/>
+                  <rect x="228" y="89" width="48" height="3" rx="1.5" fill="#FFD9EB" opacity="0.5"/>
+                  <rect x="222" y="97" width="30" height="3" rx="1.5" fill="#FF4FA3" opacity="0.8"/>
+                  <!-- Cursor in code -->
+                  <rect x="254" y="97" width="2" height="8" rx="1" fill="#FF4FA3">
+                    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <!-- Connecting arrow -->
+                  <line x1="208" y1="89" x2="215" y2="89" stroke="rgba(255,79,163,0.3)" stroke-width="1" stroke-dasharray="3,2"/>
+
+                  <!-- Ambient glow -->
+                  <ellipse cx="160" cy="165" rx="90" ry="5" fill="rgba(255,79,163,0.08)"/>
+                </svg>
+                <span class="placeholder-text">Replace with screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <p class="overlay-note">Add links above once project is live</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-tag">Web Dev</span>
+              </div>
+              <h3 class="project-title">[Project Name — e.g. Responsive Landing Page]</h3>
+              <p class="project-desc">
+                Describe what this project does, the challenge you faced, and how you solved it.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="other" data-reveal data-reveal-delay="300">
+            <div class="project-image-wrap">
+              <div class="project-img-placeholder project-img-placeholder--device" aria-label="Smartphone and tablet devices illustration">
+                <svg class="tech-illustration" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Tablet -->
+                  <rect x="55" y="20" width="135" height="140" rx="10" fill="#12121A" stroke="#F4B6D2" stroke-width="1.5"/>
+                  <rect x="63" y="32" width="119" height="116" rx="5" fill="#08080C"/>
+                  <!-- Home button tablet -->
+                  <circle cx="122" cy="153" r="5" fill="none" stroke="#F4B6D2" stroke-width="1"/>
+                  <!-- App grid on tablet -->
+                  <rect x="71" y="40" width="30" height="28" rx="5" fill="rgba(255,79,163,0.2)" stroke="rgba(255,79,163,0.3)" stroke-width="0.8"/>
+                  <rect x="107" y="40" width="30" height="28" rx="5" fill="rgba(244,182,210,0.12)" stroke="rgba(244,182,210,0.25)" stroke-width="0.8"/>
+                  <rect x="143" y="40" width="30" height="28" rx="5" fill="rgba(165,161,173,0.1)" stroke="rgba(165,161,173,0.2)" stroke-width="0.8"/>
+                  <!-- App icons -->
+                  <text x="78" y="59" font-size="14" fill="#FF4FA3" opacity="0.9" font-family="monospace">⟨/⟩</text>
+                  <text x="113" y="59" font-size="14" fill="#F4B6D2" opacity="0.8" font-family="monospace">◈</text>
+                  <text x="150" y="59" font-size="12" fill="#A5A1AD" opacity="0.7" font-family="monospace">✦</text>
+                  <!-- Content cards on tablet -->
+                  <rect x="71" y="76" width="102" height="8" rx="3" fill="rgba(255,79,163,0.4)"/>
+                  <rect x="71" y="90" width="85" height="4" rx="2" fill="rgba(245,243,247,0.12)"/>
+                  <rect x="71" y="98" width="95" height="4" rx="2" fill="rgba(165,161,173,0.1)"/>
+                  <rect x="71" y="106" width="78" height="4" rx="2" fill="rgba(165,161,173,0.08)"/>
+                  <!-- Nav bar on tablet -->
+                  <rect x="63" y="125" width="119" height="23" rx="0" fill="rgba(33,18,31,0.6)"/>
+                  <rect x="63" y="125" width="119" height="1" fill="rgba(255,79,163,0.15)"/>
+                  <circle cx="90" cy="136" r="4" fill="rgba(255,79,163,0.5)"/>
+                  <circle cx="122" cy="136" r="4" fill="rgba(165,161,173,0.3)"/>
+                  <circle cx="154" cy="136" r="4" fill="rgba(165,161,173,0.3)"/>
+
+                  <!-- Phone (in front, right side) -->
+                  <rect x="190" y="50" width="70" height="118" rx="12" fill="#1a1a28" stroke="#FF4FA3" stroke-width="1.5"/>
+                  <rect x="196" y="62" width="58" height="94" rx="4" fill="#08080C"/>
+                  <circle cx="225" cy="160" r="4" fill="none" stroke="#FF4FA3" stroke-width="1"/>
+                  <!-- Phone notch -->
+                  <rect x="210" y="55" width="30" height="6" rx="3" fill="#0c0c18"/>
+                  <!-- Phone screen content -->
+                  <rect x="200" y="68" width="50" height="6" rx="2" fill="rgba(255,79,163,0.5)"/>
+                  <rect x="200" y="80" width="38" height="3.5" rx="1.5" fill="rgba(245,243,247,0.15)"/>
+                  <rect x="200" y="87" width="44" height="3.5" rx="1.5" fill="rgba(165,161,173,0.12)"/>
+                  <rect x="200" y="94" width="40" height="3.5" rx="1.5" fill="rgba(165,161,173,0.1)"/>
+                  <rect x="200" y="104" width="50" height="20" rx="4" fill="rgba(255,79,163,0.1)" stroke="rgba(255,79,163,0.25)" stroke-width="0.8"/>
+                  <rect x="200" y="130" width="22" height="16" rx="3" fill="rgba(33,18,31,0.8)" stroke="rgba(244,182,210,0.2)" stroke-width="0.6"/>
+                  <rect x="228" y="130" width="22" height="16" rx="3" fill="rgba(33,18,31,0.8)" stroke="rgba(244,182,210,0.2)" stroke-width="0.6"/>
+
+                  <!-- Wifi / signal decoration -->
+                  <g transform="translate(260,25)" opacity="0.5">
+                    <path d="M0 12 Q6 4 12 12" stroke="#FF4FA3" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                    <path d="M2.5 14.5 Q6 9 9.5 14.5" stroke="#FF4FA3" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                    <circle cx="6" cy="16.5" r="1.2" fill="#FF4FA3"/>
+                  </g>
+
+                  <!-- Ambient glow -->
+                  <ellipse cx="160" cy="172" rx="100" ry="5" fill="rgba(255,79,163,0.07)"/>
+                </svg>
+                <span class="placeholder-text">Replace with screenshot</span>
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <p class="overlay-note">Add links above once project is live</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-tag project-category-tag--other">Other</span>
+              </div>
+              <h3 class="project-title">[Project Name — any other work]</h3>
+              <p class="project-desc">
+                A short description of this project or achievement.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">Tool / Stack</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /projects-grid -->
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="section services-section" aria-label="Services">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">What I Offer</p>
+          <h2 class="section-title">My <span class="accent">Services</span></h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card glass-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">⟨/⟩</div>
+            <h3 class="service-title">Website Design &amp; Development</h3>
+            <p class="service-desc">
+              Full-cycle web creation — from concept and wireframe to pixel-perfect, fully functional website.
+              Designed with intention, built with clean code.
+            </p>
+            <ul class="service-features" role="list">
+              <li>Custom visual design</li>
+              <li>Semantic HTML structure</li>
+              <li>CSS animations &amp; interactions</li>
+              <li>Cross-browser compatibility</li>
+            </ul>
+            <a href="#contact" class="btn btn--service">Request a Project</a>
+          </div>
+
+          <div class="service-card glass-card featured-service" data-reveal data-reveal-delay="100">
+            <div class="featured-badge">Most Requested</div>
+            <div class="service-icon" aria-hidden="true">◈</div>
+            <h3 class="service-title">Frontend Development</h3>
+            <p class="service-desc">
+              Transforming designs into responsive, interactive interfaces using HTML5, CSS3, and vanilla
+              JavaScript. Fast, accessible, and maintainable.
+            </p>
+            <ul class="service-features" role="list">
+              <li>Responsive &amp; mobile-first layouts</li>
+              <li>Design-to-code implementation</li>
+              <li>JavaScript interactivity</li>
+              <li>Performance-conscious code</li>
+            </ul>
+            <a href="#contact" class="btn btn--service">Request a Project</a>
+          </div>
+
+          <div class="service-card glass-card" data-reveal data-reveal-delay="200">
+            <div class="service-icon" aria-hidden="true">✦</div>
+            <h3 class="service-title">Graphic Design</h3>
+            <p class="service-desc">
+              Visual identities, digital graphics, and design assets that communicate with clarity and style.
+              Each piece is thoughtfully composed and typographically considered.
+            </p>
+            <ul class="service-features" role="list">
+              <li>Logo &amp; brand identity</li>
+              <li>Social media graphics</li>
+              <li>Typography &amp; layout</li>
+              <li>Digital illustrations</li>
+            </ul>
+            <a href="#contact" class="btn btn--service">Request a Project</a>
+          </div>
+
+        </div>
+
+        <!-- Quote inquiry callout -->
+        <div class="quote-callout glass-card" data-reveal>
+          <div class="quote-callout-text">
+            <h3 class="qc-title">Have a project in mind?</h3>
+            <p class="qc-desc">
+              Fill in the contact form with your project details and I'll get back to you with a quote
+              and timeline. Every project starts with a conversation.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn--primary qc-btn">Get a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== JOURNEY ==================== -->
+    <section id="journey" class="section journey-section" aria-label="Education and learning journey">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">How I Got Here</p>
+          <h2 class="section-title">My <span class="accent">Journey</span></h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <!--
+          HOW TO EDIT THE TIMELINE:
+          Each .timeline-item is one milestone.
+          - data-date: the year or date range
+          - .tl-category: Education | Certification | Skill | Achievement
+          - .tl-title: Name of the qualification / milestone
+          - .tl-institution: Where (optional)
+          - .tl-desc: Short description
+          Add, remove, or reorder items freely.
+        -->
+
+        <div class="timeline" role="list">
+
+          <div class="timeline-item" data-reveal role="listitem">
+            <div class="tl-marker" aria-hidden="true">
+              <span class="tl-dot"></span>
+              <span class="tl-line"></span>
+            </div>
+            <div class="tl-content glass-card">
+              <span class="tl-date">[YEAR]</span>
+              <span class="tl-category">Education</span>
+              <h3 class="tl-title">[Degree / Program Name]</h3>
+              <p class="tl-institution">[University / Institution Name]</p>
+              <p class="tl-desc">
+                Studying Information Engineering with a specialization in Software Engineering.
+                <!-- Add more detail once you're comfortable sharing it. -->
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal data-reveal-delay="100" role="listitem">
+            <div class="tl-marker" aria-hidden="true">
+              <span class="tl-dot"></span>
+              <span class="tl-line"></span>
+            </div>
+            <div class="tl-content glass-card">
+              <span class="tl-date">[YEAR]</span>
+              <span class="tl-category">Certification</span>
+              <h3 class="tl-title">ICDL Certification</h3>
+              <p class="tl-institution">[Issuing Body / Centre]</p>
+              <p class="tl-desc">
+                International Computer Driving Licence — core digital literacy and computer skills certification.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal data-reveal-delay="200" role="listitem">
+            <div class="tl-marker" aria-hidden="true">
+              <span class="tl-dot"></span>
+              <span class="tl-line"></span>
+            </div>
+            <div class="tl-content glass-card">
+              <span class="tl-date">[YEAR]</span>
+              <span class="tl-category">Skill</span>
+              <h3 class="tl-title">Frontend Development — HTML, CSS &amp; JavaScript</h3>
+              <p class="tl-institution">[Self-study / Course / Bootcamp — edit as needed]</p>
+              <p class="tl-desc">
+                Built responsive websites and interactive interfaces using semantic HTML, modern CSS,
+                and vanilla JavaScript.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal data-reveal-delay="300" role="listitem">
+            <div class="tl-marker" aria-hidden="true">
+              <span class="tl-dot"></span>
+              <span class="tl-line"></span>
+            </div>
+            <div class="tl-content glass-card">
+              <span class="tl-date">[YEAR]</span>
+              <span class="tl-category">Skill</span>
+              <h3 class="tl-title">Graphic Design</h3>
+              <p class="tl-institution">[Self-study / Course — edit as needed]</p>
+              <p class="tl-desc">
+                Developed visual design skills including composition, typography, colour theory, and
+                brand identity creation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more milestones here -->
+
+        </div>
+
+        <!-- CV Download -->
+        <div class="cv-download-block glass-card" data-reveal>
+          <div class="cv-text">
+            <h3 class="cv-title">Want the full picture?</h3>
+            <p class="cv-desc">
+              Download my CV for a complete overview of my education, skills, and experience.
+            </p>
+          </div>
+          <!--
+            HOW TO ADD YOUR CV:
+            1. Save your CV PDF as "assets/lana-cv.pdf" in this folder.
+            2. The download button below will work automatically.
+            Until then it shows a message.
+          -->
+          <a href="assets/lana-cv.pdf" download="Lana_CV.pdf" class="btn btn--primary cv-btn" id="cv-download-btn">
+            Download CV ↓
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section contact-section" aria-label="Contact">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Info side -->
+          <div class="contact-info" data-reveal>
+            <p class="contact-lead">
+              Have a project, a question, or just want to say hello?
+              I'd love to hear from you.
+            </p>
+
+            <ul class="contact-links" role="list">
+              <!--
+                REPLACE PLACEHOLDERS:
+                - href="mailto:..." → your real email
+                - href="https://github.com/..." → your GitHub
+                - href="https://linkedin.com/in/..." → your LinkedIn
+                Add or remove items as needed.
+              -->
+              <li class="contact-link-item">
+                <span class="cl-icon" aria-hidden="true">✉</span>
+                <div>
+                  <span class="cl-label">Email</span>
+                  <!-- REPLACE: your email address -->
+                  <a href="mailto:your.email@example.com" class="cl-value">your.email@example.com</a>
+                </div>
+              </li>
+              <li class="contact-link-item">
+                <span class="cl-icon" aria-hidden="true">⬡</span>
+                <div>
+                  <span class="cl-label">GitHub</span>
+                  <!-- REPLACE: your GitHub URL and handle -->
+                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="cl-value">github.com/yourusername</a>
+                </div>
+              </li>
+              <li class="contact-link-item">
+                <span class="cl-icon" aria-hidden="true">◈</span>
+                <div>
+                  <span class="cl-label">LinkedIn</span>
+                  <!-- REPLACE: your LinkedIn URL -->
+                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="cl-value">linkedin.com/in/yourusername</a>
+                </div>
+              </li>
+              <!--
+                ADD MORE SOCIAL LINKS HERE — e.g. Behance, Dribbble, Instagram
+                <li class="contact-link-item">
+                  <span class="cl-icon" aria-hidden="true">✦</span>
+                  <div>
+                    <span class="cl-label">Behance</span>
+                    <a href="https://behance.net/yourusername" target="_blank" rel="noopener noreferrer" class="cl-value">behance.net/yourusername</a>
+                  </div>
+                </li>
+              -->
+            </ul>
+          </div>
+
+          <!-- Form side -->
+          <div class="contact-form-wrap" data-reveal data-reveal-delay="150">
+            <!--
+              FORM SETUP:
+              This form uses mailto: as a fallback. For real submissions without a server, consider:
+              - Formspree (https://formspree.io) — free tier available
+              - Netlify Forms — if hosting on Netlify
+              See comments in script.js for how to wire up Formspree.
+            -->
+            <form
+              class="contact-form glass-card"
+              id="contact-form"
+              novalidate
+              aria-label="Contact form"
+            >
+              <div class="form-group">
+                <label for="cf-name" class="form-label">Your Name <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="cf-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Jane Doe"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+                <span class="form-error" id="cf-name-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="cf-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="jane@example.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+                <span class="form-error" id="cf-email-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-service" class="form-label">Requested Service <span class="required" aria-hidden="true">*</span></label>
+                <select id="cf-service" name="service" class="form-input form-select" required aria-required="true">
+                  <option value="">Select a service…</option>
+                  <option value="website-design-dev">Website Design &amp; Development</option>
+                  <option value="frontend-dev">Frontend Development</option>
+                  <option value="graphic-design">Graphic Design</option>
+                  <option value="other">Other / Not Sure Yet</option>
+                </select>
+                <span class="form-error" id="cf-service-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-message" class="form-label">Project Description <span class="required" aria-hidden="true">*</span></label>
+                <textarea
+                  id="cf-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Tell me about your project — what it is, what you need, and any timeline or budget notes…"
+                  required
+                  aria-required="true"
+                  rows="5"
+                ></textarea>
+                <span class="form-error" id="cf-message-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Status message (shown after submission attempt) -->
+              <div class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary form-submit-btn" id="form-submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loading" aria-hidden="true">Sending…</span>
+                </button>
+                <!-- Mailto fallback -->
+                <a href="mailto:your.email@example.com?subject=Project%20Inquiry" class="btn btn--ghost form-mailto-btn">
+                  Or email directly ↗
+                </a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main-content -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <!-- Wordmark & tagline -->
+      <div class="footer-brand">
+        <a href="#home" class="footer-wordmark" aria-label="LANA — back to top">
+          <span class="wordmark-l">L</span><span class="wordmark-ana">ANA</span>
+        </a>
+        <p class="footer-tagline">Creative Mind. Engineering Soul.</p>
+      </div>
+
+      <!-- Footer nav -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social icons -->
+      <div class="footer-social" aria-label="Social media links">
+        <!-- REPLACE: your actual URLs -->
+        <a href="mailto:your.email@example.com" class="social-link" aria-label="Send an email">✉</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">⬡</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">◈</a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> LANA. Crafted with care.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
